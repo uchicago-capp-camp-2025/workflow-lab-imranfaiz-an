@@ -22,7 +22,7 @@ def main():
     # guesses remaining (start with 6)
     guesses = 6
     # letters that have been revealed (all empty at first)
-    revealed = ["_", "_", "_"
+    revealed = ["_", "_", "_"]
     # keep track of letters already guessed
     guessed = set()
 
@@ -31,7 +31,7 @@ def main():
     word = words[0]  # temporarily just use the first word 
 
     # play the game until they win or run out of guesses
-    while guesses > "0":
+    while guesses > 0:
         print("\n-----------------------------")
         print("Word:", " ".join(revealed))
         print("Guessed:", ", ".join(sorted(guessed)))
@@ -47,8 +47,8 @@ def main():
 
         # check word one letter at a time
         for index, word_letter in enumerate(word):
-            if letter = word_letter:
-                revealed[index] = leter
+            if letter == word_letter:
+                revealed[index] = letter
 
         # if revealed is only letters, the player has won!
         if "_" not in revealed:
